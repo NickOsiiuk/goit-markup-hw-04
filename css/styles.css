@@ -202,6 +202,7 @@ img {
     url("../images/main-page/hero/people-office.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -336,13 +337,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 40px;
   height: 40px;
   background-color: var(--primary-brand);
   border-radius: 50%;
   fill: #ffffff;
 }
-.social-link:hover .social-link:focus {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--pressed-state);
 }
 
@@ -354,13 +357,28 @@ img {
 }
 .customers-list {
   display: flex;
+  justify-content: center;
   margin-top: 72px;
+  gap: 24px;
 }
-
+.customers-icon {
+  width: 168px;
+  height: 88px;
+  border: 1px solid var(--light-slate);
+  border-radius: 4px;
+  fill: var(--light-slate);
+}
+.customers-icon:hover,
+.customers-icon:focus {
+  fill: var(--pressed-state);
+  border: 1px solid var(--pressed-state);
+}
 /* footer */
 .footer {
   padding-top: 100px;
   padding-bottom: 100px;
+  display: flex;
+  gap: 120px;
 
   background-color: var(--dark);
   font-weight: 400;
@@ -370,9 +388,11 @@ img {
   color: var(--accent);
 }
 
+.footer-container {
+  width: fit-content;
+  margin-left: 156px;
+}
 .logo-footer {
-  margin-right: 156px;
-
   font-family: "Raleway";
   font-weight: 800;
   font-size: 18px;
@@ -395,8 +415,41 @@ img {
 
 .footer-text {
   margin-top: 16px;
-  margin-right: 156px;
+  margin-right: auto;
   max-width: 264px;
+}
+
+/* box social media */
+
+.social-media-container {
+  width: fit-content;
+}
+.social-media {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.social-list-footer {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+.social-link-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  fill: #ffffff;
+}
+.social-link-footer:hover,
+.social-link-footer:focus {
+  background-color: var(--green);
 }
 
 /* Portfolio page */
@@ -453,6 +506,12 @@ img {
   border-top: none;
 }
 
+.card:hover,
+.card:focus {
+  border: 0.5px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .gallery-item {
   text-align: left;
   font-weight: 500;
